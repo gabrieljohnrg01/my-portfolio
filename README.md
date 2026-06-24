@@ -44,7 +44,7 @@ To add or update certificates in the **Verified Credentials** section:
 ## Author
 
 **Gabriel John R. Goc-ong**
-- IT Intern @ PFDA 
+- 
 - General Santos City
 - **Email:** gabrieljohnrg01@gmail.com
 - **GitHub:** [@gabrieljohnrg01](https://github.com/gabrieljohnrg01)
