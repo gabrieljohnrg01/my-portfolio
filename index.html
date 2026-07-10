@@ -57,6 +57,46 @@
             position: relative;
         }
 
+        /* Cyberpunk Scrollbar */
+        .terminal-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .terminal-scroll::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 4px;
+        }
+
+        .terminal-scroll::-webkit-scrollbar-thumb {
+            background: #06b6d4;
+            border-radius: 4px;
+            box-shadow: 0 0 5px rgba(6, 182, 212, 0.5);
+        }
+
+        .terminal-scroll::-webkit-scrollbar-thumb:hover {
+            background: #22d3ee;
+        }
+
+        /* Cyberpunk Scrollbar */
+        .terminal-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .terminal-scroll::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 4px;
+        }
+
+        .terminal-scroll::-webkit-scrollbar-thumb {
+            background: #06b6d4;
+            border-radius: 4px;
+            box-shadow: 0 0 5px rgba(6, 182, 212, 0.5);
+        }
+
+        .terminal-scroll::-webkit-scrollbar-thumb:hover {
+            background: #22d3ee;
+        }
+
         .timeline-dot {
             position: absolute;
             left: -29px;
@@ -298,6 +338,11 @@
             font-family: monospace;
             text-transform: uppercase;
         }
+
+        /* Collapsible arrow animation */
+        button[aria-expanded="true"] svg {
+            transform: rotate(180deg);
+        }
     </style>
 </head>
 
@@ -392,13 +437,14 @@
                 <div class="mb-4 text-cyan-400 font-bold tracking-wider text-xs uppercase">>
                     root.user.authenticate("Gabriel John R. Goc-ong")</div>
                 <h1 class="display-5 fw-bolder mb-3 text-white">Gabriel John Goc-ong</h1>
-                <h2 class="text-slate-400 text-xl md:text-2xl mb-6 border-l-2 border-cyan-500 pl-4">IT Networks Major &
-                    Tech Troubleshooter</h2>
-                <p class="text-slate-300 text-sm md:text-base leading-relaxed mb-6">I am a dedicated IT professional and
-                    BS Information Technology student (Major in Networks) with a deep focus on hardware, network
-                    management, and system troubleshooting. Building on a strong foundation from my TVL-Computer System
-                    Servicing track, I thrive in dynamic environments where I can research and adapt to emerging
-                    technologies.</p>
+                <h2 class="text-slate-400 text-xl md:text-2xl mb-6 border-l-2 border-cyan-500 pl-4">IT Support &
+                    Network Troubleshooter</h2>
+                <p class="text-slate-300 text-sm md:text-base leading-relaxed mb-6">Final-year BS Information Technology
+                    student (Major in Networks) with hands-on
+                    experience in IT support, network troubleshooting, and infrastructure maintenance.
+                    Passionate about cloud technologies and AI-assisted development, with a strong drive
+                    for continuous learning and delivering reliable technical solutions.
+                </p>
                 <div class="flex flex-wrap gap-2">
                     <span
                         class="px-2 py-1 bg-slate-800 border border-slate-700 text-cyan-400 text-xs tracking-wider transition-colors duration-500">NETWORK_TROUBLESHOOTER</span>
@@ -533,19 +579,19 @@
                     <p class="text-slate-400 text-xs tracking-widest mb-6">LANGUAGE_PROFICIENCY</p>
                     <div class="mb-4">
                         <div class="flex justify-between text-sm mb-1"><span class="text-slate-300">Python</span><span
-                                class="text-cyan-400 font-bold">80%</span></div>
+                                class="text-cyan-400 font-bold">0%</span></div>
                         <div
                             class="w-full bg-slate-800 h-2 rounded-full overflow-hidden transition-colors duration-500">
-                            <div class="bg-cyan-500 h-2 rounded-full shadow-[0_0_10px_#06b6d4] transition-colors duration-500"
-                                style="width: 80%"></div>
+                            <div class="bg-cyan-500 h-2 rounded-full shadow-[0_0_10px_#06b6d4] transition-all duration-1000"
+                                style="width: 0%"></div>
                         </div>
                     </div>
                     <div class="mb-4">
                         <div class="flex justify-between text-sm mb-1"><span class="text-slate-300">HTML /
-                                CSS</span><span class="text-cyan-400">50%</span></div>
+                                CSS</span><span class="text-cyan-400">0%</span></div>
                         <div
                             class="w-full bg-slate-800 h-2 rounded-full overflow-hidden transition-colors duration-500">
-                            <div class="bg-cyan-600 h-2 rounded-full transition-colors duration-500" style="width: 50%">
+                            <div class="bg-cyan-600 h-2 rounded-full transition-all duration-1000" style="width: 0%">
                             </div>
                         </div>
                     </div>
@@ -558,41 +604,53 @@
                 </div>
 
                 <div class="glass-panel p-6 rounded-0">
-                    <p class="text-slate-400 text-xs tracking-widest mb-4">CLOUD_BADGES</p>
-                    <div class="flex flex-col gap-2">
-                        <a href="https://www.skills.google/public_profiles/34a2b1ee-f4ef-4df8-897c-0311640b3b04/badges/6583729"
-                            target="_blank"
-                            class="badge-card flex items-center gap-3 border border-slate-700 bg-slate-800/40 p-2 hover:border-cyan-500 transition">
-                            <div
-                                class="text-blue-400 text-sm font-bold bg-blue-500/10 w-8 h-8 flex items-center justify-center rounded transition-colors duration-500">
-                                GCP</div>
-                            <span class="text-slate-300 text-xs font-bold uppercase">Cloud Network Engineer</span>
-                        </a>
-                        <a href="https://www.skills.google/public_profiles/34a2b1ee-f4ef-4df8-897c-0311640b3b04/badges/6584295"
-                            target="_blank"
-                            class="badge-card flex items-center gap-3 border border-slate-700 bg-slate-800/40 p-2 hover:border-cyan-500 transition">
-                            <div
-                                class="text-blue-400 text-sm font-bold bg-blue-500/10 w-8 h-8 flex items-center justify-center rounded transition-colors duration-500">
-                                GCP</div>
-                            <span class="text-slate-300 text-xs font-bold uppercase">Professional Cloud Architect</span>
-                        </a>
-                        <a href="https://www.skills.google/public_profiles/34a2b1ee-f4ef-4df8-897c-0311640b3b04/badges/8643842"
-                            target="_blank"
-                            class="badge-card flex items-center gap-3 border border-slate-700 bg-slate-800/40 p-2 hover:border-cyan-500 transition">
-                            <div
-                                class="text-blue-400 text-sm font-bold bg-blue-500/10 w-8 h-8 flex items-center justify-center rounded transition-colors duration-500">
-                                GCP</div>
-                            <span class="text-slate-300 text-xs font-bold uppercase">Digital Transformation</span>
-                        </a>
-                        <a href="https://www.skills.google/public_profiles/34a2b1ee-f4ef-4df8-897c-0311640b3b04/badges/13450680"
-                            target="_blank"
-                            class="badge-card flex items-center gap-3 border border-slate-700 bg-slate-800/40 p-2 hover:border-cyan-500 transition">
-                            <div
-                                class="text-purple-400 text-sm font-bold bg-purple-500/10 w-8 h-8 flex items-center justify-center rounded transition-colors duration-500">
-                                AI</div>
-                            <span class="text-slate-300 text-xs font-bold uppercase">Gemini SDLC</span>
-                        </a>
-                    </div>
+                    <p class="text-slate-400 text-xs tracking-widest mb-4">VERIFIED_BADGES</p>
+
+                    <div class="max-h-[320px] overflow-y-auto pr-2 terminal-scroll">
+                        <!-- Google Skills Category -->
+                        <div class="mb-5">
+                            <h4 class="text-slate-500 text-[10px] tracking-widest border-b border-slate-800 pb-1 mb-3">
+                                GOOGLE SKILLS</h4>
+                            <div class="flex flex-wrap gap-4">
+                                <div class="glass-panel p-2 rounded-0 hover:border-cyan-500 transition cursor-pointer" onclick="openLightbox('https://cdn.qwiklabs.com/twCAie2Aj5jGK88MAbUhzSq%2FnvbzTmWQRW2Y2oB5V44%3D', 'https://www.skills.google/public_profiles/34a2b1ee-f4ef-4df8-897c-0311640b3b04/badges/6583729')" title="Preparing for Your Professional Cloud Network Engineer Journey">
+                                    <img src="https://cdn.qwiklabs.com/twCAie2Aj5jGK88MAbUhzSq%2FnvbzTmWQRW2Y2oB5V44%3D" alt="Cloud Network Engineer" class="w-12 h-12 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <div style="display:none;" class="text-blue-400 text-[10px] font-bold bg-blue-500/10 w-12 h-12 flex items-center justify-center rounded">GCP</div>
+                                </div>
+                                <div class="glass-panel p-2 rounded-0 hover:border-cyan-500 transition cursor-pointer" onclick="openLightbox('https://cdn.qwiklabs.com/baBJY%2BABz29CdhKhFVxWWbanbco5Zp9Im8vMZWr5%2BPM%3D', 'https://www.skills.google/public_profiles/34a2b1ee-f4ef-4df8-897c-0311640b3b04/badges/6584295')" title="Preparing for your Professional Cloud Architect Journey">
+                                    <img src="https://cdn.qwiklabs.com/baBJY%2BABz29CdhKhFVxWWbanbco5Zp9Im8vMZWr5%2BPM%3D" alt="Professional Cloud Architect" class="w-12 h-12 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <div style="display:none;" class="text-blue-400 text-[10px] font-bold bg-blue-500/10 w-12 h-12 flex items-center justify-center rounded">GCP</div>
+                                </div>
+                                <div class="glass-panel p-2 rounded-0 hover:border-cyan-500 transition cursor-pointer" onclick="openLightbox('https://cdn.qwiklabs.com/s%2FCfOyylS6HrjcxkegzOhJg8PIvogH78d1Hdj3bg8yM%3D', 'https://www.skills.google/public_profiles/34a2b1ee-f4ef-4df8-897c-0311640b3b04/badges/8643842')" title="Digital Transformation with Google Cloud">
+                                    <img src="https://cdn.qwiklabs.com/s%2FCfOyylS6HrjcxkegzOhJg8PIvogH78d1Hdj3bg8yM%3D" alt="Digital Transformation" class="w-12 h-12 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <div style="display:none;" class="text-blue-400 text-[10px] font-bold bg-blue-500/10 w-12 h-12 flex items-center justify-center rounded">GCP</div>
+                                </div>
+                                <div class="glass-panel p-2 rounded-0 hover:border-cyan-500 transition cursor-pointer" onclick="openLightbox('https://cdn.qwiklabs.com/8WAx69Kk1nJNoipzoi0vmesqTSEsQlKcbiSUJW0VeOA%3D', 'https://www.skills.google/public_profiles/34a2b1ee-f4ef-4df8-897c-0311640b3b04/badges/13450680')" title="Gemini for end-to-end SDLC">
+                                    <img src="https://cdn.qwiklabs.com/8WAx69Kk1nJNoipzoi0vmesqTSEsQlKcbiSUJW0VeOA%3D" alt="Gemini for end-to-end SDLC" class="w-12 h-12 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <div style="display:none;" class="text-purple-400 text-[10px] font-bold bg-purple-500/10 w-12 h-12 flex items-center justify-center rounded">AI</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cisco Networking Academy Category -->
+                        <div>
+                            <h4 class="text-slate-500 text-[10px] tracking-widest border-b border-slate-800 pb-1 mb-3">CISCO
+                                NETWORKING ACADEMY</h4>
+                            <div class="flex flex-wrap gap-4">
+                                <div class="glass-panel p-2 rounded-0 hover:border-cyan-500 transition cursor-pointer" onclick="openLightbox('https://images.credly.com/images/51526f76-711b-4caf-b04d-27f89512b112/NetworkDefense_v1_091721.png', 'https://www.credly.com/badges/2a771f5b-e191-4f0f-a284-85392617ebb9/public_url')" title="Network Defense">
+                                    <img src="https://images.credly.com/images/51526f76-711b-4caf-b04d-27f89512b112/NetworkDefense_v1_091721.png" alt="Network Defense" class="w-12 h-12 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <div style="display:none;" class="text-teal-400 text-[10px] font-bold bg-teal-500/10 w-12 h-12 flex items-center justify-center rounded">CSCO</div>
+                                </div>
+                                <div class="glass-panel p-2 rounded-0 hover:border-cyan-500 transition cursor-pointer" onclick="openLightbox('https://images.credly.com/images/68c0b94d-f6ac-40b1-a0e0-921439eb092e/image.png', 'https://www.credly.com/badges/4b3cbabc-8b42-4f9d-bd83-6a7b32ca6e81/public_url')" title="Python Essentials 1">
+                                    <img src="https://images.credly.com/images/68c0b94d-f6ac-40b1-a0e0-921439eb092e/image.png" alt="Python Essentials 1" class="w-12 h-12 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <div style="display:none;" class="text-teal-400 text-[10px] font-bold bg-teal-500/10 w-12 h-12 flex items-center justify-center rounded">CSCO</div>
+                                </div>
+                                <div class="glass-panel p-2 rounded-0 hover:border-cyan-500 transition cursor-pointer" onclick="openLightbox('https://images.credly.com/images/3f802526-7274-4230-91ab-f6d1a35340e6/image.png', 'https://www.credly.com/badges/5025528f-2643-496f-8973-dcc8a40cbf27/public_url')" title="Python Essentials 2">
+                                    <img src="https://images.credly.com/images/3f802526-7274-4230-91ab-f6d1a35340e6/image.png" alt="Python Essentials 2" class="w-12 h-12 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <div style="display:none;" class="text-teal-400 text-[10px] font-bold bg-teal-500/10 w-12 h-12 flex items-center justify-center rounded">CSCO</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- End of scroll container -->
                 </div>
             </div>
         </div>
@@ -603,55 +661,53 @@
                     class="h6 text-white border-bottom border-slate-700 pb-2 mb-6 tracking-widest uppercase transition-colors duration-500">
                     <span class="text-cyan-500">~/</span> Verified_Credentials
                 </h3>
-                <div class="mb-10">
-                    <h4 class="text-slate-400 text-sm tracking-widest border-l-2 border-cyan-500 pl-3 mb-4">DEVCON</h4>
-                    <div class="row g-4">
-                        <div class="col-6 col-md-4">
-                            <div class="glass-panel p-2 rounded-0"><img src="assets/cert1.png" alt="Cert 1"
-                                    class="cert-thumb" onclick="openLightbox(this.src)"></div>
-                        </div>
-                        <div class="col-6 col-md-4">
-                            <div class="glass-panel p-2 rounded-0"><img src="assets/cert2.png" alt="Cert 2"
-                                    class="cert-thumb" onclick="openLightbox(this.src)"></div>
-                        </div>
-                        <div class="col-6 col-md-4">
-                            <div class="glass-panel p-2 rounded-0"><img src="assets/cert3.png" alt="Cert 3"
-                                    class="cert-thumb" onclick="openLightbox(this.src)"></div>
-                        </div>
-                        <div class="col-6 col-md-4">
-                            <div class="glass-panel p-2 rounded-0"><img src="assets/cert4.png" alt="Cert 4"
-                                    class="cert-thumb" onclick="openLightbox(this.src)"></div>
-                        </div>
-                        <div class="col-6 col-md-4">
-                            <div class="glass-panel p-2 rounded-0"><img src="assets/cert5.png" alt="Cert 5"
-                                    class="cert-thumb" onclick="openLightbox(this.src)"></div>
-                        </div>
-                        <div class="col-6 col-md-4">
-                            <div class="glass-panel p-2 rounded-0"><img src="assets/cert6.png" alt="Cert 6"
-                                    class="cert-thumb" onclick="openLightbox(this.src)"></div>
-                        </div>
-                        <div class="col-6 col-md-4">
-                            <div class="glass-panel p-2 rounded-0"><img src="assets/cert7.png" alt="Cert 7"
-                                    class="cert-thumb" onclick="openLightbox(this.src)"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mb-4">
-                    <h4 class="text-slate-400 text-sm tracking-widest border-l-2 border-cyan-500 pl-3 mb-4">OTHER EVENT
-                        NAME</h4>
-                    <div class="row g-4">
-                        <!-- Example placeholder for a new certificate from another event -->
-                        <div class="col-6 col-md-4">
-                            <div class="glass-panel p-2 rounded-0">
-                                <!-- Replace 'assets/new-cert.png' with your new event certificate path -->
-                                <img src="assets/new-cert.png" alt="New Event Cert"
-                                    onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMzMzQxNTUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIxNHB4IiBmaWxsPSIjOThhMWIzIiBkeT0iLjNlbSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+TkVXIENFUlQ8L3RleHQ+PC9zdmc+';"
-                                    class="cert-thumb" onclick="openLightbox(this.src)">
+                <!-- DEVCON Category -->
+                <div class="mb-6">
+                    <button
+                        class="w-full text-left flex justify-between items-center text-slate-400 text-sm tracking-widest border-l-2 border-cyan-500 pl-3 mb-2 hover:text-cyan-400 transition bg-transparent border-t-0 border-r-0 border-b-0 focus:outline-none collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#collapseDevcon" aria-expanded="false">
+                        <span>DEVCON</span>
+                        <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div class="collapse" id="collapseDevcon">
+                        <div class="row g-4 pt-2">
+                            <div class="col-6 col-md-4">
+                                <div class="glass-panel p-2 rounded-0"><img src="assets/cert1.png" alt="Cert 1"
+                                        class="cert-thumb" onclick="openLightbox(this.src)"></div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="glass-panel p-2 rounded-0"><img src="assets/cert2.png" alt="Cert 2"
+                                        class="cert-thumb" onclick="openLightbox(this.src)"></div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="glass-panel p-2 rounded-0"><img src="assets/cert3.png" alt="Cert 3"
+                                        class="cert-thumb" onclick="openLightbox(this.src)"></div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="glass-panel p-2 rounded-0"><img src="assets/cert4.png" alt="Cert 4"
+                                        class="cert-thumb" onclick="openLightbox(this.src)"></div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="glass-panel p-2 rounded-0"><img src="assets/cert5.png" alt="Cert 5"
+                                        class="cert-thumb" onclick="openLightbox(this.src)"></div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="glass-panel p-2 rounded-0"><img src="assets/cert6.png" alt="Cert 6"
+                                        class="cert-thumb" onclick="openLightbox(this.src)"></div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="glass-panel p-2 rounded-0"><img src="assets/cert7.png" alt="Cert 7"
+                                        class="cert-thumb" onclick="openLightbox(this.src)"></div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+
             </div>
         </div>
 
@@ -701,8 +757,14 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
-                <div class="modal-body p-0 text-center bg-black/50">
-                    <img id="lightbox-img" src="" class="img-fluid w-100">
+                <div class="modal-body p-0 text-center bg-black/50 flex flex-col justify-center items-center" style="min-height: 300px;">
+                    <img id="lightbox-img" src="" class="img-fluid" style="max-height: 65vh; width: auto; margin: 0 auto; display: block;">
+                </div>
+                <div class="modal-footer border-slate-700 py-3 justify-content-center bg-slate-900" id="lightbox-footer" style="display:none;">
+                    <a id="lightbox-verify-btn" href="#" target="_blank" class="text-cyan-400 hover:text-cyan-300 font-mono text-xs tracking-widest flex items-center gap-2 border border-cyan-500/50 hover:bg-cyan-500/10 px-4 py-2 rounded transition-all">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        VERIFY_CREDENTIAL
+                    </a>
                 </div>
             </div>
         </div>
@@ -860,8 +922,16 @@
         }, 300);
 
         // --- 3. Lightbox ---
-        function openLightbox(imgSrc) {
+        function openLightbox(imgSrc, verifyUrl = null) {
             document.getElementById('lightbox-img').src = imgSrc;
+            const footer = document.getElementById('lightbox-footer');
+            const verifyBtn = document.getElementById('lightbox-verify-btn');
+            if (verifyUrl) {
+                verifyBtn.href = verifyUrl;
+                footer.style.display = 'flex';
+            } else {
+                footer.style.display = 'none';
+            }
             new bootstrap.Modal(document.getElementById('certModal')).show();
         }
 
