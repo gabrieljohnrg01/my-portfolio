@@ -1,0 +1,312 @@
+body {
+    background-color: #0f172a;
+    color: #f8fafc;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    margin: 0;
+    overflow-x: hidden;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+#circuit-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    pointer-events: none;
+}
+
+.ambient-glow {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.1) 0%, rgba(15, 23, 42, 0) 70%);
+    top: -150px;
+    right: -150px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.glass-panel {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(51, 65, 85, 0.8);
+    transition: all 0.3s ease;
+}
+
+.glass-panel:hover {
+    border-color: #06b6d4;
+    box-shadow: 0 10px 30px -10px rgba(6, 182, 212, 0.15);
+}
+
+.timeline-border {
+    border-left: 2px solid #334155;
+    position: relative;
+}
+
+.terminal-scroll::-webkit-scrollbar {
+    width: 6px;
+}
+
+.terminal-scroll::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.5);
+    border-radius: 4px;
+}
+
+.terminal-scroll::-webkit-scrollbar-thumb {
+    background: #06b6d4;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(6, 182, 212, 0.5);
+}
+
+.terminal-scroll::-webkit-scrollbar-thumb:hover {
+    background: #22d3ee;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -29px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #06b6d4;
+    box-shadow: 0 0 10px #06b6d4;
+}
+
+.badge-card {
+    text-decoration: none;
+    display: block;
+}
+
+.cert-thumb {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    cursor: pointer;
+    filter: grayscale(40%) opacity(80%);
+    transition: all 0.4s ease;
+}
+
+.cert-thumb:hover {
+    filter: grayscale(0%) opacity(100%);
+    transform: scale(1.02);
+}
+
+.repo-card {
+    text-decoration: none;
+    display: block;
+}
+
+#term-input:focus {
+    outline: none;
+}
+
+#boot-screen {
+    position: fixed;
+    inset: 0;
+    background-color: #050505;
+    z-index: 9999;
+    color: #22c55e;
+    font-family: monospace;
+    padding: 2rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: opacity 0.5s ease-out;
+}
+
+.boot-line {
+    margin-bottom: 4px;
+    font-size: 12px;
+}
+
+body[data-theme="hacker"] {
+    background-color: #050505;
+    color: #22c55e;
+}
+
+body[data-theme="hacker"] .text-cyan-400,
+body[data-theme="hacker"] .text-cyan-500,
+body[data-theme="hacker"] .text-white {
+    color: #22c55e !important;
+}
+
+body[data-theme="hacker"] .bg-cyan-500,
+body[data-theme="hacker"] .bg-cyan-600 {
+    background-color: #22c55e !important;
+}
+
+body[data-theme="hacker"] .border-cyan-500,
+body[data-theme="hacker"] .border-slate-700 {
+    border-color: #22c55e !important;
+}
+
+body[data-theme="hacker"] .glass-panel {
+    background: rgba(0, 20, 0, 0.8) !important;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.1);
+}
+
+body[data-theme="hacker"] .text-slate-300,
+body[data-theme="hacker"] .text-slate-400 {
+    color: #16a34a !important;
+}
+
+body[data-theme="hacker"] .timeline-dot {
+    background-color: #22c55e !important;
+    box-shadow: 0 0 10px #22c55e !important;
+}
+
+body[data-theme="light"] {
+    background-color: #f8fafc;
+    color: #0f172a;
+}
+
+body[data-theme="light"] .text-white,
+body[data-theme="light"] .text-slate-300,
+body[data-theme="light"] .text-slate-400 {
+    color: #334155 !important;
+}
+
+body[data-theme="light"] .text-cyan-400,
+body[data-theme="light"] .text-cyan-500 {
+    color: #2563eb !important;
+}
+
+body[data-theme="light"] .bg-cyan-500,
+body[data-theme="light"] .bg-cyan-600 {
+    background-color: #2563eb !important;
+}
+
+body[data-theme="light"] .border-cyan-500,
+body[data-theme="light"] .border-slate-700 {
+    border-color: #cbd5e1 !important;
+}
+
+body[data-theme="light"] .glass-panel {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border-color: #cbd5e1 !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+body[data-theme="light"] .bg-slate-900\/80 {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-bottom-color: #e2e8f0 !important;
+}
+
+body[data-theme="light"] .timeline-border {
+    border-left-color: #cbd5e1 !important;
+}
+
+body[data-theme="light"] .timeline-dot {
+    background-color: #2563eb !important;
+    box-shadow: none !important;
+}
+
+#secret-dashboard {
+    position: fixed;
+    inset: 0;
+    background-color: #000;
+    z-index: 10000;
+    color: #ff003c;
+    font-family: monospace;
+    padding: 2rem;
+    overflow-y: auto;
+    display: none;
+}
+
+.scanline {
+    width: 100%;
+    height: 100px;
+    z-index: 10001;
+    position: absolute;
+    pointer-events: none;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(255, 0, 60, 0.2) 50%, rgba(0, 0, 0, 0) 100%);
+    opacity: 0.1;
+    animation: scanline 6s linear infinite;
+}
+
+@keyframes scanline {
+    0% {
+        top: -100px;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(2px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(0px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(2px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(2px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+.shake-active {
+    animation: shake 0.4s infinite;
+}
+
+#destruct-overlay {
+    position: fixed;
+    inset: 0;
+    background: black;
+    z-index: 999999;
+    color: red;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-family: monospace;
+    text-transform: uppercase;
+}
+
+button[aria-expanded="true"] svg {
+    transform: rotate(180deg);
+}
+
+.collapse.show {
+    visibility: visible !important;
+}
